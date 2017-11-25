@@ -35,11 +35,7 @@ public class EleveController  {
     }
 
     @RequestMapping("/get")
-    public List<Eleve> getEleve() {
-        List<Eleve> els = new ArrayList<>();
-        for (int i =0;i< 1;i++) {
-            els.addAll(eleveRepository.findAll());
-        }
-        return els;
+    public List<Eleve> getAllEleves() {
+        return eleveRepository.findAll();
     }
 }
